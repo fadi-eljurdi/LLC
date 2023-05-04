@@ -6,7 +6,7 @@ export default {
         <h5 class="m-0 fs-5 pop text-heading">Check also</h5>
         <small class="fs-xsmall text-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, eaque.</small>
         <div class="row mt-3 g-3">
-            <div v-for="b in blogs.slice(-8)" :key="b" class="col-12 d-flex gap-1 align-items-center">
+            <div v-for="b in blogs" :key="b" class="col-12 d-flex gap-1 align-items-center">
                 <span class="material-symbols-outlined text-info">feed</span>
                 <a class="text-fade text-heading" :href="b.url"> {{b.title}} </a>
             </div>
@@ -18,4 +18,9 @@ export default {
     </aside>
     `,
     props:['blogs','utilities'],
+    computed:{
+        blogs(){
+            return this.blogs.slice(-8)
+        }
+    }
 }

@@ -65,5 +65,6 @@ export default {
 
     </footer>
     `,
-    props:['contact','links','services','utilities']
+    props:['contact','links','services','utilities'],
+    
 }

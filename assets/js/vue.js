@@ -18,20 +18,28 @@ const app = Vue.createApp({
             title: 'Jurdi & CO LLC',
             blogSpinner: false,
             profile:'',
+            contact:'',
             logo: 'https://drive.google.com/uc?id=16vVKvWJ5Lg9jTwWvH-iqnriHmVESqIW7',
             api: 'https://script.google.com/macros/s/AKfycbwHU2PC2XkH7HbBQ3fQh9Wm9LtO62vwVFxuvWlHyGpOgLXNlj_y1TirEAbEL5A-me_V/exec'
         }
     },
     methods: {
-        getProfile() {
+        async getProfile() {
             this.blogSpinner = true
             var api = this.api
             api += `?getProfile=1`
-            fetch(api).then(res => res.json()).then(res => {
-                console.log(res);
-                this.profile = res
-                this.blogSpinner = false
-            })
+            // fetch(api).then(res => res.json()).then(res => {
+            //     console.log(res);
+            //     this.profile = res
+            //     this.blogSpinner = false
+            // })
+            var res = await fetch(api)
+            res = await res.json()
+            console.log(res);
+            this.profile = res
+            this.contact = res.contact
+            this.blogSpinner = false
+
         },
         async translate(){
             

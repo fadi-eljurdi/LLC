@@ -6,7 +6,7 @@ function env(path) {
         if (location.href.includes('fadi-eljurdi.github.io')) {
             // in production mode
             // add /app/ directory to all links
-            return '/app' + path
+            return '/LLC' + path
         }
     }
 }
