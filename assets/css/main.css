@@ -1,0 +1,180 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Almarai&family=Cinzel&family=Poppins&display=swap');
+
+:root {
+    /* For Backgrounds */
+    --aswad: #1b263b;
+
+    /* For Containers */
+    --container: #0d1b2a;
+    --pot: #343a40;
+
+    /* For Subtitles */
+    --text-abyad: #e0e1dd;
+
+    /* For Heading text */
+    --text-heading: #778da9;
+
+    /* For normal text */
+    --text-normal: #5d81a9;
+
+}
+
+/* General Styles */
+
+.point{
+    cursor: pointer;
+}
+.dropdown-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: .7rem;
+}
+
+.no-styles {
+    text-decoration: none !important;
+    list-style: none;
+}
+
+
+.text-fade {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    position: relative;
+}
+
+.text-fade-2 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    position: relative;
+}
+
+.text-fade-3 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    position: relative;
+}
+.text-fade-4 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    position: relative;
+}
+
+.bg-glass {
+
+    background: #0d1b2a68;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+/* FONTS */
+.pop {
+    font-family: 'Poppins', sans-serif;
+}
+
+.arb {
+    font-family: 'Almarai', sans-serif;
+}
+
+.cin {
+    font-family: 'Cinzel', serif;
+}
+
+/* COLORS */
+.bg-aswad {
+    background-color: var(--aswad);
+}
+
+.bg-container {
+    background-color: var(--container);
+}
+
+.bg-pot {
+    background-color: var(--pot);
+}
+
+.text-normal {
+    color: var(--text-normal);
+}
+
+.text-heading {
+    color: var(--text-heading);
+}
+
+.text-abyad {
+    color: var(--text-abyad);
+}
+
+.text-icon {
+    color: var(--text-icon);
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-info-hover:hover {
+    color: var(--bs-info);
+}
+
+
+#translated > h1{
+    color: var(--bs-info);
+}
+#translated > p{
+    color: var(--text-heading);
+}
+
+#original > h1{
+    color: var(--bs-info);
+}
+#original > p{
+    color: var(--text-heading);
+}
+
+/* FONT SIZES */
+
+.fs-small {
+    font-size: small;
+}
+
+.fs-smaller {
+    font-size: smaller;
+}
+
+.fs-xsmall {
+    font-size: x-small;
+}
+
+.fs-xxsmall {
+    font-size: xx-small;
+}
+
+/* SCROLL BAR */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--text-normal);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--bs-info);
+}
