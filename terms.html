@@ -22,7 +22,7 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
   </head>
   <body class="bg-aswad" id="app">
-    <header-section :services="profile.services" :contact="profile.contact" :logo="logo" :utilities="utilities"></header-section>
+    <header-section :services="profile.services" :contact="contact" :logo="logo" :utilities="utilities"></header-section>
     
     <main style="margin-top: 80px;" class="py-3">
 
@@ -150,7 +150,7 @@
                 related thereto.</h5>
         </div>
     </main>
-    <footer-section :services="profile.services" :contact="profile.contact" :links="profile.links" :utilities="utilities"></footer-section>
+    <footer-section :services="profile.services" :contact="contact" :links="profile.links" :utilities="utilities"></footer-section>
     <section v-if="blogSpinner" class="w-100 h-100 position-fixed start-0 top-0 z-3 bg-glass d-flex justify-content-center align-items-center">
       <span class="spinner-grow text-heading"></span>
     </section>
