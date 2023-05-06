@@ -1,3 +1,5 @@
+
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
 export default {
     template:
     /*html*/
@@ -25,5 +27,18 @@ export default {
         <div class="swiper-pagination position-static my-3"></div>
     </figure>
     `,
-    props:['media']
+    props:['media'],    
+    mounted(){
+        var swiper = new Swiper('.swiper', {
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true
+            },
+            spaceBetween:20,
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+        });
+    }
 }
