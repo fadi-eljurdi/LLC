@@ -26,6 +26,12 @@ export default {
       </div>
     </section>
     `,
+    computed:{
+      lazyBlogs(){
+        if(location.href.includes('/blogs')) return this.blogs
+        else return this.blogs.slice(-8)
+      }
+    },
     props:['blogs','utilities'],
     mounted(){
         if(location.href.includes('/blogs')){
