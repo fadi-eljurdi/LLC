@@ -20,7 +20,7 @@ const app = Vue.createApp({
             profile:'',
             contact:'',
             logo: 'https://drive.google.com/uc?id=16vVKvWJ5Lg9jTwWvH-iqnriHmVESqIW7',
-            api: 'https://script.google.com/macros/s/AKfycbwHU2PC2XkH7HbBQ3fQh9Wm9LtO62vwVFxuvWlHyGpOgLXNlj_y1TirEAbEL5A-me_V/exec'
+            api: 'https://script.google.com/macros/s/AKfycby-Qs1kX_QsE0pya57wAMJZd-DYnfqrSYJsLEweLLq9BJ3MsAC9F7DEcCTRo-YT9dSK/exec'
         }
     },
     methods: {
