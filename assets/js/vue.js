@@ -19,7 +19,6 @@ const app = Vue.createApp({
             blogSpinner: false,
             profile:'',
             contact:'',
-            logo: 'https://drive.google.com/uc?id=16vVKvWJ5Lg9jTwWvH-iqnriHmVESqIW7',
             api: 'https://script.google.com/macros/s/AKfycby-Qs1kX_QsE0pya57wAMJZd-DYnfqrSYJsLEweLLq9BJ3MsAC9F7DEcCTRo-YT9dSK/exec'
         }
     },
