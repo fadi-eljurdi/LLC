@@ -4,7 +4,7 @@ export default {
     `
     <header class="w-100 p-3 position-fixed z-3 top-0 start-0 d-flex justify-content-between align-items-center bg-glass shadow-sm">
         <section>
-          <a :href="utilities.env('/')" class="no-styles"><img :src="logo" alt="jurdi logo" class="img-fluid" width="100"></a>
+          <a :href="utilities.env('/')" class="no-styles"><img :src="contact.logo" alt="jurdi logo" class="img-fluid" width="100"></a>
         </section>
         <nav class="align-items-center gap-3 pop d-none d-lg-flex point">
           <a :href="utilities.env('/')" class="text-info-hover link-underline link-underline-opacity-0 text-abyad">Home</a>
