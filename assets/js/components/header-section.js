@@ -6,9 +6,9 @@ export default {
         <section>
           <a :href="utilities.env('/')" class="no-styles"><img :src="logo" alt="jurdi logo" class="img-fluid" width="100"></a>
         </section>
-        <nav class="align-items-center gap-3 pop d-none d-lg-flex">
+        <nav class="align-items-center gap-3 pop d-none d-lg-flex point">
           <a :href="utilities.env('/')" class="text-info-hover link-underline link-underline-opacity-0 text-abyad">Home</a>
-          <a :href="utilities.env('/#services')" class="text-info-hover link-underline link-underline-opacity-0 text-abyad" data-bs-toggle="dropdown">Services</a>
+          <span class="text-info-hover link-underline link-underline-opacity-0 text-abyad" data-bs-toggle="dropdown">Services</span>
           <ul class="dropdown-menu dropdown-menu-dark">
             <li v-for="s in services" :key="s"><a class="dropdown-item" :href="s.url">{{s.title}}</a></li>
           </ul>
@@ -28,7 +28,7 @@ export default {
           <i class="bi bi-three-dots-vertical text-abyad fs-3" data-bs-toggle="dropdown"></i>
           <ul class="dropdown-menu dropdown-menu-dark">
             <li><a class="dropdown-item" :href="utilities.env('/')"><i class="bi bi-house text-info"></i> Home page</a></li>
-            <li><a class="dropdown-item" :href="utilities.env('/#services')"><i class="bi bi-check2 text-info"></i> Services</a></li>
+            <li><span class="dropdown-item" ><i class="bi bi-check2 text-info"></i> Services</span></li>
             <li><a class="dropdown-item" :href="utilities.env('/team.html')"><i class="bi bi-people-fill text-info"></i> Team</a></li>
             <li><a class="dropdown-item" :href="utilities.env('/blogs')"><i class="bi bi-newspaper text-info"></i> Blogs</a></li>
             <li><hr class="dropdown-divider"></li>
