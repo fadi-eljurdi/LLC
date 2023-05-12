@@ -9,7 +9,7 @@ export default {
           <p class="text-justify text-normal pop">Whether it's developing a new product or service, expanding into new markets, or overcoming regulatory hurdles, our tailored services are designed to help clients achieve their goals with maximum impact.</p>
         </div>
       </div>
-      <div class="row g-3 justify-content-between">
+      <div class="row g-3 justify-content-start">
         <div class="col-12 col-lg-3"  v-for="s in services" :key="s" >
           <a :href="s.url" class="no-styles d-flex flex-column gap-2 bg-glass rounded p-3">
             <div class="ratio ratio-4x3">

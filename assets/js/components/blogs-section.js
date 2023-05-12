@@ -9,7 +9,7 @@ export default {
           <p class="text-justify text-normal pop">We believe that staying informed and up-to-date is critical to making informed business decisions and staying ahead of the competition. That's why we are committed to providing high-quality, relevant, and engaging content that helps our clients stay informed, learn new skills, and develop fresh ideas.</p>
         </div>
       </div>
-      <div class="row g-3 justify-content-between">
+      <div class="row g-3 justify-content-start">
         <div v-for="b in blogs" :key="b" class="col-12 col-lg-3">
           <a :href="b.url" class="no-styles d-flex flex-column gap-2 bg-glass rounded p-3">
             <div class="ratio ratio-16x9">
