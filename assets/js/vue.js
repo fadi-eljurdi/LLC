@@ -66,6 +66,14 @@ const app = Vue.createApp({
             this.blogSpinner = true
             const original = document.querySelector('#original');
             // console.log(original.innerHTML);
+            var source = ()=>{
+                if(this.dir() == 'rtl') return 'ar'
+                return 'en'
+            }
+            var target = ()=>{
+                if(this.dir() == 'rtl') return 'en'
+                return 'ar'
+            }
             var api = this.api
             api += `?translate=1`
             var res = await fetch(api,{
@@ -75,8 +83,8 @@ const app = Vue.createApp({
                 },
                 body:JSON.stringify({
                     text:original.innerHTML,
-                    source:'en',
-                    target:'ar'
+                    source:source(),
+                    target:target()
 
                 })
             })
@@ -90,7 +98,7 @@ const app = Vue.createApp({
             this.blogSpinner = false
 
 
-        }
+        },
     },
     mounted(){
         this.getProfile()
