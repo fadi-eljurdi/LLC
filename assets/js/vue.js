@@ -23,6 +23,27 @@ const app = Vue.createApp({
         }
     },
     methods: {
+        
+        font(){
+            if(document.querySelector('html').lang == 'ar'){
+                //the page is already in arabic
+                
+                var translated = document.querySelector('#translated')
+                translated.setAttribute('dir','ltr')
+                translated.classList.add('pop')
+            }else{
+                // the page is in english
+                
+                var translated = document.querySelector('#translated')
+                translated.setAttribute('dir','rtl')
+                translated.classList.add('arb')
+            }
+        },
+        dir(){
+            if(document.querySelector('html').lang == 'ar') return 'rtl'
+            else return 'ltr'
+            
+        },
         async getProfile() {
             this.blogSpinner = true
             var api = this.api
@@ -62,9 +83,7 @@ const app = Vue.createApp({
 
             res = await res.json()
             console.log(res);
-            var translated = document.querySelector('#translated')
-            translated.setAttribute('dir','rtl')
-            translated.classList.add('arb')
+            this.font()
             translated.innerHTML = (utilities.fixClosingTags(res)).replaceAll(' & nbsp؛ ',' ')
             this.translated = true
             
@@ -75,6 +94,19 @@ const app = Vue.createApp({
     },
     mounted(){
         this.getProfile()
+        
+        if(document.querySelector('html').lang == 'ar'){
+            if(document.getElementById('original')){
+                document.getElementById('original').dir = 'rtl'
+                document.getElementById('original').classList.add('arb')
+            }
+        }else{
+            if(document.getElementById('original')){
+                
+                document.getElementById('original').dir = 'ltr'
+                document.getElementById('original').classList.add('pop')
+            }
+        }
     }
 })
 
