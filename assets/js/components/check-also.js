@@ -20,7 +20,8 @@ export default {
     props:['blogs','utilities'],
     computed:{
         blogs(){
-            return this.blogs.slice(-8)
+            return this.blogs.length <= 8 ? this.blogs : this.blogs.slice(-8);
+            // return this.blogs
         }
     }
 }

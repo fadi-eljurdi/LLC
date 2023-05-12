@@ -44,5 +44,5 @@ export default {
     </header>
 
     `,
-    props:['contact','services','logo','utilities']
+    props:['contact','services','utilities']
 }
