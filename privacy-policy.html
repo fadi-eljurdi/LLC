@@ -25,7 +25,7 @@
   <body class="bg-aswad" id="app">
     <header-section :services="services" :contact="contact" :utilities="utilities"></header-section>
     <main style="margin-top: 80px;min-height: 400px;" class="py-3 text-light container">
-      <a href="https://app.termly.io/document/privacy-policy/3ac9b451-1db5-4689-8094-8ff809eb8197" title="https://app.termly.io/document/privacy-policy/3ac9b451-1db5-4689-8094-8ff809eb8197">https://app.termly.io/document/privacy-policy/3ac9b451-1db5-4689-8094-8ff809eb8197</a> 
+      <div name="termly-embed" data-id="3ac9b451-1db5-4689-8094-8ff809eb8197" data-type="iframe"></div><br><script type="text/javascript">(function(d, s, id) {<br>  var js, tjs = d.getElementsByTagName(s)[0];<br>  if (d.getElementById(id)) return;<br>  js = d.createElement(s); js.id = id;<br>  js.src = "https://app.termly.io/embed-policy.min.js";<br>  tjs.parentNode.insertBefore(js, tjs);<br>}(document, 'script', 'termly-jssdk'));</script>
     </main>
     <footer-section :services="services" :contact="contact" :links="links" :utilities="utilities"></footer-section>
     <section v-if="blogSpinner" class="w-100 h-100 position-fixed start-0 top-0 z-3 bg-glass d-flex justify-content-center align-items-center">
