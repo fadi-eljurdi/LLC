@@ -26,6 +26,9 @@ export default {
             <li><a class="dropdown-item" :href="contact.whatsapp"><i class="bi bi-whatsapp text-info"></i> Whatsapp</a></li>
             <li><a class="dropdown-item" :href="contact.linkedIn"><i class="bi bi-linkedin text-info"></i> LinkedIn</a></li>
             <li><a class="dropdown-item" :href="utilities.env('/terms.html')"><i class="bi bi-file-text text-info"></i> Terms and Conditions</a></li>
+            <li><a class="dropdown-item" :href="utilities.env('/disclaimer.html')"><i class="bi bi-file-text text-info"></i> Disclaimer</a></li>
+            <li><a class="dropdown-item" :href="utilities.env('/cookie-policy.html')"><i class="bi bi-file-text text-info"></i> Cookies Policy</a></li>
+            <li><a class="dropdown-item" :href="utilities.env('/acceptable-usage.html')"><i class="bi bi-file-text text-info"></i> Acceptable Usage</a></li>
             <li><a class="dropdown-item" :href="utilities.env('/privacy-policy.html')"><i class="bi bi-shield-check text-info"></i> Privacy policy</a></li>
           </ul>
         </nav>
@@ -42,6 +45,9 @@ export default {
             <li><a class="dropdown-item" :href="contact.whatsapp"><i class="bi bi-whatsapp text-info"></i> Whatsapp</a></li>
             <li><a class="dropdown-item" :href="contact.linkedIn"><i class="bi bi-linkedin text-info"></i> LinkedIn</a></li>
             <li><a class="dropdown-item" :href="utilities.env('/terms.html')"><i class="bi bi-file-text text-info"></i> Terms and Conditions</a></li>
+            <li><a class="dropdown-item" :href="utilities.env('/disclaimer.html')"><i class="bi bi-file-text text-info"></i> Disclaimer</a></li>
+            <li><a class="dropdown-item" :href="utilities.env('/cookie-policy.html')"><i class="bi bi-file-text text-info"></i> Cookies Policy</a></li>
+            <li><a class="dropdown-item" :href="utilities.env('/acceptable-usage.html')"><i class="bi bi-file-text text-info"></i> Acceptable Usage</a></li>
             <li><a class="dropdown-item" :href="utilities.env('/privacy-policy.html')"><i class="bi bi-shield-check text-info"></i> Privacy policy</a></li>
           </ul>
         </aside>

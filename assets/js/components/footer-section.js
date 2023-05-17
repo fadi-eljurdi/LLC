@@ -25,6 +25,15 @@ export default {
                 <a :href="utilities.env('/terms.html')" class="text-info-hover d-flex gap-3 align-items-center no-styles text-heading">
                   <i class="bi bi-file-text text-normal"></i><span>Terms & Conditions</span>
                 </a>
+                <a :href="utilities.env('/disclaimer.html')" class="text-info-hover d-flex gap-3 align-items-center no-styles text-heading">
+                  <i class="bi bi-file-text text-normal"></i><span>Disclaimer</span>
+                </a>
+                <a :href="utilities.env('/acceptable-usage.html')" class="text-info-hover d-flex gap-3 align-items-center no-styles text-heading">
+                  <i class="bi bi-file-text text-normal"></i><span>Acceptable Usage</span>
+                </a>
+                <a :href="utilities.env('/cookie-policy.html')" class="text-info-hover d-flex gap-3 align-items-center no-styles text-heading">
+                  <i class="bi bi-file-text text-normal"></i><span>Cookie Policy</span>
+                </a>
                 <a :href="utilities.env('/privacy-policy.html')" class="text-info-hover d-flex gap-3 align-items-center no-styles text-heading">
                   <i class="bi bi-shield-check text-normal"></i><span>Privacy Policy</span>
                 </a>
