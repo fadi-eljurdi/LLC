@@ -4,7 +4,12 @@ export default {
     `
     <header class="w-100 p-3 position-fixed z-3 top-0 start-0 d-flex justify-content-between align-items-center bg-glass shadow-sm">
         <section>
-          <a :href="utilities.env('/')" class="no-styles"><img :src="contact.logo" alt="jurdi logo" class="img-fluid" width="100"></a>
+          <a :href="utilities.env('/')" class="no-styles">
+            <div v-if="!contact.logo" class="skeleton rounded" style="width:100px;height:30px;"></div>
+            <div v-else style="width:80px;">
+              <div class="ratio ratio-16x9"><img :src="contact.logo" alt="jurdi logo" class="img-fluid object-fit-cover"></div>
+            </div>
+          </a>
         </section>
         <nav class="align-items-center gap-3 pop d-none d-lg-flex point">
           <a :href="utilities.env('/')" class="text-info-hover link-underline link-underline-opacity-0 text-abyad">Home</a>
