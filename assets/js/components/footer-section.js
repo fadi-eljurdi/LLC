@@ -13,9 +13,6 @@ export default {
                 <a :href="'mailto:'+contact.email" class="text-info-hover d-flex gap-3 align-items-center no-styles text-heading">
                   <i class="bi bi-envelope text-normal"></i><span>{{contact.email}}</span>
                 </a>
-                <a :href="'tel:'+contact.number" class="text-info-hover d-flex gap-3 align-items-center no-styles text-heading">
-                  <i class="bi bi-telephone-outbound text-normal"></i><span>+{{contact.number}}</span>
-                </a>
                 <a :href="contact.whatsapp" class="text-info-hover d-flex gap-3 align-items-center no-styles text-heading">
                   <i class="bi bi-whatsapp text-normal"></i><span>Whatsapp</span>
                 </a>
@@ -29,10 +26,10 @@ export default {
                   <i class="bi bi-file-text text-normal"></i><span>Disclaimer</span>
                 </a>
                 <a :href="utilities.env('/acceptable-usage.html')" class="text-info-hover d-flex gap-3 align-items-center no-styles text-heading">
-                  <i class="bi bi-file-text text-normal"></i><span>Acceptable Usage</span>
+                  <i class="bi bi-shield-check text-normal"></i><span>Acceptable Usage</span>
                 </a>
                 <a :href="utilities.env('/cookie-policy.html')" class="text-info-hover d-flex gap-3 align-items-center no-styles text-heading">
-                  <i class="bi bi-file-text text-normal"></i><span>Cookie Policy</span>
+                  <i class="bi bi-shield-check text-normal"></i><span>Cookie Policy</span>
                 </a>
                 <a :href="utilities.env('/privacy-policy.html')" class="text-info-hover d-flex gap-3 align-items-center no-styles text-heading">
                   <i class="bi bi-shield-check text-normal"></i><span>Privacy Policy</span>
