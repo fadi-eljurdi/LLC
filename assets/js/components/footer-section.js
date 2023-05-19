@@ -13,7 +13,7 @@ export default {
                 <a :href="'mailto:'+contact.email" class="text-info-hover d-flex gap-3 align-items-center no-styles text-heading">
                   <i class="bi bi-envelope text-normal"></i><span>{{contact.email}}</span>
                 </a>
-                <a :href="https://wa.me/'+ contact.whatsapp" class="text-info-hover d-flex gap-3 align-items-center no-styles text-heading">
+                <a :href="'https://wa.me/'+ contact.whatsapp" class="text-info-hover d-flex gap-3 align-items-center no-styles text-heading">
                   <i class="bi bi-whatsapp text-normal"></i><span>Whatsapp</span>
                 </a>
                 <a :href="contact.linkedIn" class="text-info-hover d-flex gap-3 align-items-center no-styles text-heading">

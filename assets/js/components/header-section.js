@@ -29,7 +29,7 @@ export default {
           <!-- <span class="text-info-hover link-underline link-underline-opacity-0 text-abyad" data-bs-toggle="dropdown">Contact</span> -->
           <ul class="dropdown-menu dropdown-menu-dark">
             <li><a class="dropdown-item" :href="'mailto:'+contact.email"><i class="bi bi-envelope text-info"></i> {{contact.email}}</a></li>
-            <li><a class="dropdown-item" :href="https://wa.me/'+ contact.whatsapp"><i class="bi bi-whatsapp text-info"></i> Whatsapp</a></li>
+            <li><a class="dropdown-item" :href="'https://wa.me/'+ contact.whatsapp"><i class="bi bi-whatsapp text-info"></i> Whatsapp</a></li>
             <li><a class="dropdown-item" :href="contact.linkedIn"><i class="bi bi-linkedin text-info"></i> LinkedIn</a></li>
             <li><a class="dropdown-item" :href="utilities.env('/terms.html')"><i class="bi bi-file-text text-info"></i> Terms and Conditions</a></li>
             <li><a class="dropdown-item" :href="utilities.env('/disclaimer.html')"><i class="bi bi-file-text text-info"></i> Disclaimer</a></li>
@@ -47,7 +47,7 @@ export default {
             <li><a class="dropdown-item" :href="utilities.env('/blogs')"><i class="bi bi-newspaper text-info"></i> Blogs</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" :href="'mailto:'+contact.email"><i class="bi bi-envelope text-info"></i> {{contact.email}}</a></li>
-            <li><a class="dropdown-item" :href="https://wa.me/'+ contact.whatsapp"><i class="bi bi-whatsapp text-info"></i> Whatsapp</a></li>
+            <li><a class="dropdown-item" :href="'https://wa.me/'+ contact.whatsapp"><i class="bi bi-whatsapp text-info"></i> Whatsapp</a></li>
             <li><a class="dropdown-item" :href="contact.linkedIn"><i class="bi bi-linkedin text-info"></i> LinkedIn</a></li>
             <li><a class="dropdown-item" :href="utilities.env('/terms.html')"><i class="bi bi-file-text text-info"></i> Terms and Conditions</a></li>
             <li><a class="dropdown-item" :href="utilities.env('/disclaimer.html')"><i class="bi bi-file-text text-info"></i> Disclaimer</a></li>
