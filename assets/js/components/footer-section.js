@@ -2,7 +2,7 @@ export default {
     template:
     /*html*/
     `
-    <footer class="w-100 mt-5 bg-glass pb-5">
+    <footer class="w-100 mt-5 bg-aswad pb-5">
       <div class="container">
         <div class="row g-3">
           <div class="col-12 col-lg-6 mt-5">
