@@ -59,4 +59,15 @@ function fixClosingTags(htmlString) {
 function parseHTML(id, value) { document.getElementById(id).innerHTML = value }
 
 
-export default { env, timo, dotmark, parseHTML, shareBlog, fixClosingTags }
+function convertGoogleDriveLink(link) {
+    
+    try{
+        const fileId = link.split("/")[5].split("?")[0];
+        return `https://drive.google.com/uc?id=${fileId}`;
+    }catch(err){
+       console.log(err);
+       return link
+    }
+}
+
+export default { env, timo, dotmark, parseHTML, shareBlog, fixClosingTags, convertGoogleDriveLink }
