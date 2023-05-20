@@ -51,7 +51,7 @@ export default {
           </div>
           <div class="col-12 col-lg-3 mt-5">
             <div class="d-flex flex-column gap-1 pop">
-              <h5 class="text-heading fs-4 fw-bold">Useful Links</h5>
+              <h5 class="text-heading fs-4 fw-bold">Our Business Partners</h5>
               <p class="text-normal fs-smaller text-fade-2">Connecting you to the resources you need.</p>
               <div class="d-flex flex-column gap-2">
                 <a v-for="link in links" :key="link" :href="link.url" class="text-info-hover d-flex gap-3 align-items-center no-styles text-heading">

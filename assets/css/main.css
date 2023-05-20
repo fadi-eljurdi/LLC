@@ -3,7 +3,9 @@
 
 :root {
     /* For Backgrounds */
-    --aswad: #1b263b;
+    /* --aswad: #1b263b; */
+    
+    --aswad: #020f21;
 
     /* For Containers */
     --container: #0d1b2a;
@@ -20,6 +22,9 @@
 
 }
 
+#logo{
+    transform: scale(1.5);
+}
 /* General Styles */
 
 .point{
@@ -70,7 +75,8 @@
 
 .bg-glass {
 
-    background: #0d1b2ac7;
+    /* background: #0d1b2ac7; */
+    background: #172e5053;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
 }

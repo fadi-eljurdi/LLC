@@ -7,7 +7,7 @@ export default {
           <a :href="utilities.env('/')" class="no-styles">
             <div v-if="!contact.logo" class="skeleton rounded" style="width:100px;height:30px;"></div>
             <div v-else style="width:80px;">
-              <div class="ratio ratio-16x9"><img :src="contact.logo" alt="jurdi logo" class="img-fluid object-fit-cover"></div>
+              <div class="ratio ratio-16x9"><img :src="contact.logo" alt="jurdi logo" class="img-fluid object-fit-cover" id="logo"></div>
             </div>
           </a>
         </section>
@@ -17,14 +17,15 @@ export default {
           <ul class="dropdown-menu dropdown-menu-dark">
             <li v-for="s in services" :key="s"><a class="dropdown-item" :href="s.url">{{s.title}}</a></li>
           </ul>
-          <span class="text-info-hover link-underline link-underline-opacity-0 text-abyad" data-bs-toggle="dropdown">Policies</span>
+          <span class="text-info-hover link-underline link-underline-opacity-0 text-abyad" data-bs-toggle="dropdown">Policies and Terms of use</span>
           <ul class="dropdown-menu dropdown-menu-dark">
           <li><a class="dropdown-item" :href="utilities.env('/privacy-policy.html')">Privacy policy</a></li>
+          <li><a class="dropdown-item" :href="utilities.env('/terms.html')">Terms of use</a></li>
           <li><a class="dropdown-item" :href="utilities.env('/acceptable-usage.html')">Acceptable usage policy</a></li>
           <li><a class="dropdown-item" :href="utilities.env('/cookie-policy.html')">Cookies policy</a></li>
           <li><a class="dropdown-item" :href="utilities.env('/disclaimer.html')">Disclaimer</a></li>
           </ul>
-          <a :href="utilities.env('/terms.html')" class="text-info-hover link-underline link-underline-opacity-0 text-abyad">Terms of use</a>
+          
           <a :href="utilities.env('/team.html')" class="text-info-hover link-underline link-underline-opacity-0 text-abyad">Team</a>
           <a :href="utilities.env('/blogs')" class="text-info-hover link-underline link-underline-opacity-0 text-abyad">Blogs</a>
           <a :href="'https://wa.me/'+ contact.whatsapp" class="btn btn-sm btn-success"><i class="bi bi-whatsapp"></i> Whatsapp</a>
