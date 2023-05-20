@@ -17,11 +17,14 @@ export default {
           <ul class="dropdown-menu dropdown-menu-dark">
             <li v-for="s in services" :key="s"><a class="dropdown-item" :href="s.url">{{s.title}}</a></li>
           </ul>
-          <a :href="utilities.env('/privacy-policy.html')" class="text-info-hover link-underline link-underline-opacity-0 text-abyad">Privacy Policy</a>
-          <a :href="utilities.env('/terms.html')" class="text-info-hover link-underline link-underline-opacity-0 text-abyad">Terms & conditions</a>
-          <a :href="utilities.env('/disclaimer.html')" class="text-info-hover link-underline link-underline-opacity-0 text-abyad">Disclaimer</a>
-          <a :href="utilities.env('/cookie-policy.html')" class="text-info-hover link-underline link-underline-opacity-0 text-abyad">Cookies Policy</a>
-          <a :href="utilities.env('/acceptable-usage.html')" class="text-info-hover link-underline link-underline-opacity-0 text-abyad">Acceptable Usage</a>
+          <span class="text-info-hover link-underline link-underline-opacity-0 text-abyad" data-bs-toggle="dropdown">Policies</span>
+          <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item" :href="utilities.env('/privacy-policy.html')">Privacy policy</a></li>
+          <li><a class="dropdown-item" :href="utilities.env('/acceptable-usage.html')">Acceptable usage policy</a></li>
+          <li><a class="dropdown-item" :href="utilities.env('/cookie-policy.html')">Cookies policy</a></li>
+          <li><a class="dropdown-item" :href="utilities.env('/disclaimer.html')">Disclaimer</a></li>
+          </ul>
+          <a :href="utilities.env('/terms.html')" class="text-info-hover link-underline link-underline-opacity-0 text-abyad">Terms of use</a>
           <a :href="utilities.env('/team.html')" class="text-info-hover link-underline link-underline-opacity-0 text-abyad">Team</a>
           <a :href="utilities.env('/blogs')" class="text-info-hover link-underline link-underline-opacity-0 text-abyad">Blogs</a>
           <a :href="'https://wa.me/'+ contact.whatsapp" class="btn btn-sm btn-success"><i class="bi bi-whatsapp"></i> Whatsapp</a>
