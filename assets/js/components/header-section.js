@@ -43,25 +43,25 @@ export default {
           </ul>
         </nav>
         <aside class="d-block d-lg-none">
-          <div class="d-flex align-items-center gap-1">
+          <div class="d-flex align-items-center gap-2">
             <a :href="'https://wa.me/'+ contact.whatsapp" class="btn btn-sm btn-success"><i class="bi bi-whatsapp"></i> Whatsapp</a>
             <i class="bi bi-three-dots-vertical text-abyad fs-3" data-bs-toggle="dropdown"></i>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" :href="utilities.env('/')"><i class="bi bi-house text-info"></i> Home page</a></li>
+              <li><span class="dropdown-item" ><i class="bi bi-check2 text-info"></i> Services</span></li>
+              <li><a class="dropdown-item" :href="utilities.env('/team.html')"><i class="bi bi-people-fill text-info"></i> Team</a></li>
+              <li><a class="dropdown-item" :href="utilities.env('/blogs')"><i class="bi bi-newspaper text-info"></i> Blogs</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" :href="'mailto:'+contact.email"><i class="bi bi-envelope text-info"></i> {{contact.email}}</a></li>
+              <li><a class="dropdown-item" :href="'https://wa.me/'+ contact.whatsapp"><i class="bi bi-whatsapp text-info"></i> Whatsapp</a></li>
+              <li><a class="dropdown-item" :href="contact.linkedIn"><i class="bi bi-linkedin text-info"></i> LinkedIn</a></li>
+              <li><a class="dropdown-item" :href="utilities.env('/terms.html')"><i class="bi bi-file-text text-info"></i> Terms and Conditions</a></li>
+              <li><a class="dropdown-item" :href="utilities.env('/disclaimer.html')"><i class="bi bi-file-text text-info"></i> Disclaimer</a></li>
+              <li><a class="dropdown-item" :href="utilities.env('/cookie-policy.html')"><i class="bi bi-shield-check text-info"></i> Cookies Policy</a></li>
+              <li><a class="dropdown-item" :href="utilities.env('/acceptable-usage.html')"><i class="bi bi-shield-check text-info"></i> Acceptable Usage</a></li>
+              <li><a class="dropdown-item" :href="utilities.env('/privacy-policy.html')"><i class="bi bi-shield-check text-info"></i> Privacy policy</a></li>
+            </ul>
           </div>
-          <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" :href="utilities.env('/')"><i class="bi bi-house text-info"></i> Home page</a></li>
-            <li><span class="dropdown-item" ><i class="bi bi-check2 text-info"></i> Services</span></li>
-            <li><a class="dropdown-item" :href="utilities.env('/team.html')"><i class="bi bi-people-fill text-info"></i> Team</a></li>
-            <li><a class="dropdown-item" :href="utilities.env('/blogs')"><i class="bi bi-newspaper text-info"></i> Blogs</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" :href="'mailto:'+contact.email"><i class="bi bi-envelope text-info"></i> {{contact.email}}</a></li>
-            <li><a class="dropdown-item" :href="'https://wa.me/'+ contact.whatsapp"><i class="bi bi-whatsapp text-info"></i> Whatsapp</a></li>
-            <li><a class="dropdown-item" :href="contact.linkedIn"><i class="bi bi-linkedin text-info"></i> LinkedIn</a></li>
-            <li><a class="dropdown-item" :href="utilities.env('/terms.html')"><i class="bi bi-file-text text-info"></i> Terms and Conditions</a></li>
-            <li><a class="dropdown-item" :href="utilities.env('/disclaimer.html')"><i class="bi bi-file-text text-info"></i> Disclaimer</a></li>
-            <li><a class="dropdown-item" :href="utilities.env('/cookie-policy.html')"><i class="bi bi-shield-check text-info"></i> Cookies Policy</a></li>
-            <li><a class="dropdown-item" :href="utilities.env('/acceptable-usage.html')"><i class="bi bi-shield-check text-info"></i> Acceptable Usage</a></li>
-            <li><a class="dropdown-item" :href="utilities.env('/privacy-policy.html')"><i class="bi bi-shield-check text-info"></i> Privacy policy</a></li>
-          </ul>
         </aside>
         
     </header>
