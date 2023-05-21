@@ -41,7 +41,7 @@ export default {
             },
             autoplay: {
                 delay: 2000,
-                disableOnInteraction: false,
+                disableOnInteraction: true,
             },
         });
     }
