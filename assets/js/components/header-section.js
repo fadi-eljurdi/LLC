@@ -43,7 +43,10 @@ export default {
           </ul>
         </nav>
         <aside class="d-block d-lg-none">
-          <i class="bi bi-three-dots-vertical text-abyad fs-3" data-bs-toggle="dropdown"></i>
+          <div class="d-flex align-items-center gap-1">
+            <a :href="'https://wa.me/'+ contact.whatsapp" class="btn btn-sm btn-success"><i class="bi bi-whatsapp"></i> Whatsapp</a>
+            <i class="bi bi-three-dots-vertical text-abyad fs-3" data-bs-toggle="dropdown"></i>
+          </div>
           <ul class="dropdown-menu dropdown-menu-dark">
             <li><a class="dropdown-item" :href="utilities.env('/')"><i class="bi bi-house text-info"></i> Home page</a></li>
             <li><span class="dropdown-item" ><i class="bi bi-check2 text-info"></i> Services</span></li>
