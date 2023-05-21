@@ -25,11 +25,17 @@ export default {
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination position-static my-3"></div>
+        <button v-if="media.length >= 2" class="btn tb-sm btn-info" @click="swiper.slideNext()">Watch video</button>
     </figure>
     `,
-    props:['media'],    
+    props:['media'],
+    data(){
+        return{
+            swiper:''
+        }
+    },    
     mounted(){
-        var swiper = new Swiper('.swiper', {
+        this.swiper = new Swiper('.swiper', {
             pagination: {
               el: '.swiper-pagination',
               clickable: true
@@ -39,10 +45,10 @@ export default {
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev',
             },
-            autoplay: {
-                delay: 2000,
-                disableOnInteraction: true,
-            },
+            // autoplay: {
+            //     delay: 2000,
+            //     disableOnInteraction: false,
+            // },
         });
     }
 }
