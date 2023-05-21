@@ -6,7 +6,7 @@ export default {
       <div class="row">
         <div class="col-12">
           <h1 class="text-info cin fs-2">Expert Perspectives to Inform Your Strategy</h1>
-          <p class="text-justify text-normal pop">We believe that staying informed and up-to-date is critical to making informed business decisions and staying ahead of the competition. That's why we are committed to providing high-quality, relevant, and engaging content that helps our clients stay informed, learn new skills, and develop fresh ideas.</p>
+          <p class="text-justify text-normal fs-small pop">We believe that staying informed and up-to-date is critical to making informed business decisions and staying ahead of the competition. That's why we are committed to providing high-quality, relevant, and engaging content that helps our clients stay informed, learn new skills, and develop fresh ideas.</p>
         </div>
       </div>
       <div class="row g-3 justify-content-start">
