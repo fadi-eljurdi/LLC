@@ -2,7 +2,7 @@ export default {
     template:
     /*html*/
     `
-    <header class="w-100 p-3 position-fixed z-3 top-0 start-0 d-flex justify-content-between align-items-center bg-aswad shadow-sm">
+    <header class="w-100 p-3 position-fixed z-3 top-0 start-0 d-flex justify-content-between align-items-center bg-glass shadow-sm">
         <section>
           <a :href="utilities.env('/')" class="no-styles">
             <div v-if="!contact.logo" class="skeleton rounded" style="width:100px;height:30px;"></div>
