@@ -184,3 +184,7 @@
 ::-webkit-scrollbar-thumb:hover {
     background: var(--bs-info);
 }
+
+.swiper-pagination-bullet{
+    background-color: #e0e1dd !important;
+}
