@@ -22,7 +22,7 @@ const app = Vue.createApp({
             services:'',
             blogs:'',
             links:'',
-            api: 'https://script.google.com/macros/s/AKfycby-Qs1kX_QsE0pya57wAMJZd-DYnfqrSYJsLEweLLq9BJ3MsAC9F7DEcCTRo-YT9dSK/exec'
+            api: 'https://script.google.com/macros/s/AKfycbzayZLP651XR7YC-jlk8Dg-yxg5ncH0SeM86ZhKDpKPMIRzyE37wwid06aIaXLeGQ-F/exec'
         }
     },
     methods: {
@@ -64,6 +64,7 @@ const app = Vue.createApp({
             this.blogs = res.blogs
             this.services = res.services
             this.links = res.links
+            this.contact.video = this.utilities.getYouTubeId(this.contact.video)
             this.blogSpinner = false
 
         },

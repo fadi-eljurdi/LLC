@@ -7,7 +7,7 @@ export default {
           <a :href="utilities.env('/')" class="no-styles">
             <div v-if="!contact.logo" class="skeleton rounded" style="width:100px;height:30px;"></div>
             <div v-else style="width:80px;">
-              <div class="ratio ratio-16x9"><img :src="contact.logo" alt="jurdi logo" class="img-fluid object-fit-cover" id="logo"></div>
+              <div class="ratio ratio-16x9"><img :src="contact.logo" alt="jurdi logo" class="ms-3 img-fluid object-fit-cover" id="logo"></div>
             </div>
           </a>
         </section>

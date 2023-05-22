@@ -5,8 +5,8 @@ export default {
     <section class="container d-flex flex-column gap-3">
       <div class="row">
         <div class="col-12">
-          <h1 class="text-info cin fs-2">Creating Impact through Tailored Services</h1>
-          <p class="text-justify text-normal fs-small pop">Whether it's developing a new product or service, expanding into new markets, or overcoming regulatory hurdles, our tailored legal services are designed to help clients achieve their goals with maximum impact.</p>
+          <h1 class="text-info cin fs-2">{{contact.sHeading}}</h1>
+          <p class="text-justify text-normal fs-small pop">{{contact.sTagline}}</p>
         </div>
       </div>
       <div class="row g-3 justify-content-start">
@@ -23,5 +23,5 @@ export default {
       </div>
     </section>
     `,
-    props:['services','utilities']
+    props:['services','utilities','contact']
 }

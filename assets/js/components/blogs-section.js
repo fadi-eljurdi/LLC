@@ -5,8 +5,8 @@ export default {
     <section class="container d-flex flex-column gap-3">
       <div class="row">
         <div class="col-12">
-          <h1 class="text-info cin fs-2">Expert Perspectives to Inform Your Strategy</h1>
-          <p class="text-justify text-normal fs-small pop">We believe that staying informed and up-to-date is critical to making informed business decisions and staying ahead of the competition. That's why we are committed to providing high-quality, relevant, and engaging content that helps our clients stay informed, learn new skills, and develop fresh ideas.</p>
+          <h1 class="text-info cin fs-2">{{contact.bHeading}}</h1>
+          <p class="text-justify text-normal fs-small pop">{{contact.bTagline}}</p>
         </div>
       </div>
       <div class="row g-3 justify-content-start">
@@ -32,7 +32,7 @@ export default {
         else return this.blogs.slice(-8)
       }
     },
-    props:['blogs','utilities'],
+    props:['blogs','utilities','contact'],
     mounted(){
         if(location.href.includes('/blogs')){
             document.getElementById('show-more').classList.add('d-none')
