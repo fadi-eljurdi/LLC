@@ -46,7 +46,7 @@
   <body class="bg-aswad" id="app">
     <header-section :services="services" :contact="contact" :logo="logo" :utilities="utilities"></header-section>
     <main style="margin-top: 80px;" class="py-3">
-      <blogs-section :blogs="blogs" :utilities="utilities"></blogs-section>
+      <blogs-section :blogs="blogs" :contact="contact" :utilities="utilities"></blogs-section>
     </main>
     <footer-section :services="services" :contact="contact" :links="links" :utilities="utilities"></footer-section>
     <section v-if="blogSpinner" class="w-100 h-100 position-fixed start-0 top-0 z-3 bg-glass d-flex justify-content-center align-items-center">
