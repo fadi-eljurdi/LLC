@@ -10,7 +10,7 @@ export default {
         </div>
       </div>
       <div class="row g-3 justify-content-start">
-        <div v-for="b in blogs" :key="b" class="col-12 col-lg-3">
+        <div v-for="b in filteredBlogs" :key="b" class="col-12 col-lg-3">
           <a :href="b.url" class="no-styles d-flex flex-column gap-2 bg-glass rounded p-3">
             <div class="ratio ratio-16x9">
               <img :src="b.thumbnail" :alt="b.title" class="img-fluid object-fit-cover rounded-top skeleton" >
@@ -27,15 +27,19 @@ export default {
     </section>
     `,
     computed:{
-      lazyBlogs(){
-        if(location.href.includes('/blogs')) return this.blogs
-        else return this.blogs.slice(-8)
+      filteredBlogs(){
+        if(location.href.includes('/blogs')){
+          return this.blogs
+        }else {
+          return this.lazyblogs
+        }
       }
     },
-    props:['blogs','utilities','contact'],
+    props:['blogs','utilities','contact','lazyblogs'],
     mounted(){
         if(location.href.includes('/blogs')){
             document.getElementById('show-more').classList.add('d-none')
         }
+        // console.log(this.lazyBlogs());
     }
 }

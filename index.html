@@ -76,7 +76,7 @@
       <hr class="container my-5 text-light">
       <services-section  :contact="contact" :services="services" :utilities="utilities"></services-section>
       <hr class="container my-5 text-light">
-      <blogs-section  :contact="contact" :blogs="blogs" :utilities="utilities"></blogs-section>
+      <blogs-section  :contact="contact" :blogs="blogs" :lazyblogs="lazyBlogs" :utilities="utilities"></blogs-section>
     </main>
     <footer-section :services="services" :contact="contact" :links="links" :utilities="utilities"></footer-section>
     <section v-if="blogSpinner" class="w-100 h-100 position-fixed start-0 top-0 z-3 bg-glass d-flex justify-content-center align-items-center">
