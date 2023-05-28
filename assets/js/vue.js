@@ -65,7 +65,7 @@ const app = Vue.createApp({
             this.blogs = res.blogs.reverse()
             // console.log(this.blogs.slice(-8).reverse());
             // console.log(this.blogs.slice);
-            this.lazyBlogs = res.blogs.slice(-8).reverse()
+            this.lazyBlogs = res.blogs.slice(-8)
             console.log(this.lazyBlogs);
             this.services = res.services
             this.links = res.links
