@@ -35,11 +35,11 @@ export default {
         }
       }
     },
+    
     props:['blogs','utilities','contact','lazyblogs'],
     mounted(){
         if(location.href.includes('/blogs')){
             document.getElementById('show-more').classList.add('d-none')
         }
-        // console.log(this.lazyBlogs());
     }
 }

@@ -22,6 +22,7 @@ const app = Vue.createApp({
             services:'',
             blogs:'',
             lazyBlogs:'',
+            reversedBlogs:'',
             links:'',
             api: 'https://script.google.com/macros/s/AKfycbzayZLP651XR7YC-jlk8Dg-yxg5ncH0SeM86ZhKDpKPMIRzyE37wwid06aIaXLeGQ-F/exec'
         }
@@ -62,11 +63,15 @@ const app = Vue.createApp({
             console.log(res);
             this.profile = res
             this.contact = res.contact
-            this.blogs = res.blogs.reverse()
-            // console.log(this.blogs.slice(-8).reverse());
-            // console.log(this.blogs.slice);
-            this.lazyBlogs = res.blogs.slice(-8)
-            console.log(this.lazyBlogs);
+            if(location.href.includes('/blogs')){
+                this.blogs = res.blogs.reverse()
+            }else{
+                this.blogs = res.blogs
+            }
+            // this.reversedBlogs = res.blogs.reverse()
+
+            this.lazyBlogs = res.blogs.slice(-8).reverse()
+            console.log(this.reversedBlogs);
             this.services = res.services
             this.links = res.links
             this.contact.video = this.utilities.getYouTubeId(this.contact.video)
