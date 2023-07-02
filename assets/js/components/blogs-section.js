@@ -18,6 +18,7 @@ export default {
             <strong class="text-fade text-info pop fs-5 m-0">{{b.title}}</strong>
             <p style="min-height: 50px;" class="text-fade-3 text-normal m-0 fs-small">{{b.description}}</p>
             <time class="text-heading fs-xsmall pop">{{utilities.timo(b.date)}}</time>
+            <button class="btn btn-sm btn-outline-info">Read the full blog</button>
           </a>
         </div>
       </div>

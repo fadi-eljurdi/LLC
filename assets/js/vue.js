@@ -8,6 +8,7 @@ import blogMedia from './/components/blog-media.js'
 import blogNavigation from './components/blog-navigation.js'
 import checkAlso from './components/check-also.js'
 import teamSection from './components/team-section.js'
+import sendMessageForm from './components/send-message-form.js'
 
 const app = Vue.createApp({
     data() {
@@ -70,7 +71,7 @@ const app = Vue.createApp({
             }
             // this.reversedBlogs = res.blogs.reverse()
 
-            this.lazyBlogs = res.blogs.slice(-8).reverse()
+            this.lazyBlogs = res.blogs.slice(-4).reverse()
             console.log(this.reversedBlogs);
             this.services = res.services
             this.links = res.links
@@ -144,4 +145,5 @@ app.component('blog-media',blogMedia)
 app.component('blog-navigation',blogNavigation)
 app.component('check-also',checkAlso)
 app.component('team-section',teamSection)
+app.component('send-message-form',sendMessageForm)
 app.mount('#app')

@@ -2,6 +2,8 @@ export default {
     template:
     /*html*/
     `
+    <send-message-form v-if="showForm" :email="contact.email"><button class="btn btn-sm btn-outline-secondary px-3" @click="showForm = !showForm">Cancel</button></send-message-form>
+
     <footer class="w-100 mt-5 bg-glass pb-5">
       <div class="container">
         <div class="row g-3">
@@ -10,9 +12,9 @@ export default {
               <h5 class="text-heading fs-4 fw-bold">JURDI & CO LLC</h5>
               <p class="text-normal fs-smaller">Our services cater to the unique needs of businesses within this niche, offering tailored solutions to help them achieve their goals and maximize their success.</p>
               <div class="d-flex flex-column gap-2">
-                <a :href="'mailto:'+contact.email" class="text-info-hover d-flex gap-3 align-items-center no-styles text-heading">
+                <span  @click="showForm = !showForm" class="text-info-hover d-flex gap-3 align-items-center no-styles text-heading">
                   <i class="bi bi-envelope text-normal"></i><span>{{contact.email}}</span>
-                </a>
+                </span>
                 <a :href="'https://wa.me/'+ contact.whatsapp" class="text-info-hover d-flex gap-3 align-items-center no-styles text-heading">
                   <i class="bi bi-whatsapp text-normal"></i><span>Whatsapp</span>
                 </a>
@@ -72,5 +74,11 @@ export default {
     </footer>
     `,
     props:['contact','links','services','utilities'],
+    data(){
+      return{
+        
+        showForm:false,
+      }
+    }
     
 }

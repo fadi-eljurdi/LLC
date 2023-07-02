@@ -29,22 +29,19 @@ export default {
           <a :href="utilities.env('/team.html')" class="text-info-hover link-underline link-underline-opacity-0 text-abyad">Team</a>
           <a :href="utilities.env('/blogs')" class="text-info-hover link-underline link-underline-opacity-0 text-abyad">Blogs</a>
           <a :href="'https://wa.me/'+ contact.whatsapp" class="btn btn-sm btn-success"><i class="bi bi-whatsapp"></i> Whatsapp</a>
-          
-          <!-- <span class="text-info-hover link-underline link-underline-opacity-0 text-abyad" data-bs-toggle="dropdown">Contact</span> -->
-          <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" :href="'mailto:'+contact.email"><i class="bi bi-envelope text-info"></i> {{contact.email}}</a></li>
-            <li><a class="dropdown-item" :href="'https://wa.me/'+ contact.whatsapp"><i class="bi bi-whatsapp text-info"></i> Whatsapp</a></li>
-            <li><a class="dropdown-item" :href="contact.linkedIn"><i class="bi bi-linkedin text-info"></i> LinkedIn</a></li>
-            <li><a class="dropdown-item" :href="utilities.env('/terms.html')"><i class="bi bi-file-text text-info"></i> Terms and Conditions</a></li>
-            <li><a class="dropdown-item" :href="utilities.env('/disclaimer.html')"><i class="bi bi-file-text text-info"></i> Disclaimer</a></li>
-            <li><a class="dropdown-item" :href="utilities.env('/cookie-policy.html')"><i class="bi bi-shield-check text-info"></i> Cookies Policy</a></li>
-            <li><a class="dropdown-item" :href="utilities.env('/acceptable-usage.html')"><i class="bi bi-shield-check text-info"></i> Acceptable Usage</a></li>
-            <li><a class="dropdown-item" :href="utilities.env('/privacy-policy.html')"><i class="bi bi-shield-check text-info"></i> Privacy policy</a></li>
-          </ul>
+    
         </nav>
         <aside class="d-block d-lg-none">
-          <div class="d-flex align-items-center gap-2">
-            <a :href="'https://wa.me/'+ contact.whatsapp" class="btn btn-sm btn-success"><i class="bi bi-whatsapp"></i> Whatsapp</a>
+          <div class="d-flex align-items-center gap-3">
+            <!-- <a :href="'https://wa.me/'+ contact.whatsapp" class="btn btn-sm btn-success"><i class="bi bi-whatsapp"></i> Whatsapp</a> -->
+            <i class="bi bi-telephone-outbound text-abyad fs-5" data-bs-toggle="dropdown"></i>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><span class="dropdown-item" @click="showForm = !showForm"><i class="bi bi-envelope text-info"></i> Email</span></li>
+              <li><a class="dropdown-item" :href="'https://wa.me/'+ contact.whatsapp"><i class="bi bi-whatsapp text-info"></i> Whatsapp</a></li>
+              <li><a class="dropdown-item" :href="contact.linkedIn"><i class="bi bi-linkedin text-info"></i> LinkedIn</a></li>
+            </ul>
+
+
             <i class="bi bi-three-dots-vertical text-abyad fs-3" data-bs-toggle="dropdown"></i>
             <ul class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item" :href="utilities.env('/')"><i class="bi bi-house text-info"></i> Home page</a></li>
@@ -52,9 +49,6 @@ export default {
               <li><a class="dropdown-item" :href="utilities.env('/team.html')"><i class="bi bi-people-fill text-info"></i> Team</a></li>
               <li><a class="dropdown-item" :href="utilities.env('/blogs')"><i class="bi bi-newspaper text-info"></i> Blogs</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" :href="'mailto:'+contact.email"><i class="bi bi-envelope text-info"></i> {{contact.email}}</a></li>
-              <li><a class="dropdown-item" :href="'https://wa.me/'+ contact.whatsapp"><i class="bi bi-whatsapp text-info"></i> Whatsapp</a></li>
-              <li><a class="dropdown-item" :href="contact.linkedIn"><i class="bi bi-linkedin text-info"></i> LinkedIn</a></li>
               <li><a class="dropdown-item" :href="utilities.env('/terms.html')"><i class="bi bi-file-text text-info"></i> Terms and Conditions</a></li>
               <li><a class="dropdown-item" :href="utilities.env('/disclaimer.html')"><i class="bi bi-file-text text-info"></i> Disclaimer</a></li>
               <li><a class="dropdown-item" :href="utilities.env('/cookie-policy.html')"><i class="bi bi-shield-check text-info"></i> Cookies Policy</a></li>
@@ -63,9 +57,16 @@ export default {
             </ul>
           </div>
         </aside>
-        
+
     </header>
+    <send-message-form v-if="showForm" :email="contact.email"><button class="btn btn-sm btn-outline-secondary px-3" @click="showForm = !showForm">Cancel</button></send-message-form>
 
     `,
-    props:['contact','services','utilities']
+    props:['contact','services','utilities'],
+    data(){
+      return{
+        
+        showForm:false,
+      }
+    }
 }
