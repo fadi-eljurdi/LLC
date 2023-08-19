@@ -90,7 +90,7 @@
     <header-section :services="services" :contact="contact" :utilities="utilities"></header-section>
     <main style="margin-top: 80px;" class="py-3">
       <hero-section :links="links" :utilities="utilities" :contact="contact">
-        <iframe width="560" height="315" :src="'https://www.youtube-nocookie.com/embed/'+contact.video+'?rel=0'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe class="d-none d-lg-block" width="560" height="315" :src="'https://www.youtube-nocookie.com/embed/'+contact.video+'?rel=0'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </hero-section>
       <hr class="container my-5 text-light">
       <services-section  :contact="contact" :services="services" :utilities="utilities"></services-section>

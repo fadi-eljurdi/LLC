@@ -14,7 +14,7 @@ export default {
             </a>
           </div> -->
         </div>
-        <div class="col-12 col-lg-5">
+        <div class="d-none d-lg-block col-12 col-lg-5">
           <div class="ratio ratio-16x9">
             <slot></slot>
             <!-- <video :src="utilities.convertGoogleDriveLink(contact.video)" controls class="img-fluid object-fit-cover rounded skeleton"></video> -->
