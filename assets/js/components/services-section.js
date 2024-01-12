@@ -12,7 +12,7 @@ export default {
         <div class="col-12 col-lg-3"  v-for="s in services" :key="s" >
           <a :href="s.url" class="no-styles d-flex flex-column gap-2 bg-glass rounded p-3">
             <div class="ratio ratio-4x3">
-              <img :src="s.thumbnail" :alt="s.title" class="img-fluid object-fit-cover rounded-top skeleton" >
+              <img :src="'https://lh3.googleusercontent.com/d/'+utilities.exId(s.thumbnail)" :alt="s.title" class="img-fluid object-fit-cover rounded-top skeleton" >
             </div>
             <strong class="text-fade text-info pop fs-5 m-0 text-uppercase">{{s.title}}</strong>
             <!-- <p style="min-height: 50px;" class="text-fade-3 text-normal m-0 fs-small">{{s.description}}</p> -->

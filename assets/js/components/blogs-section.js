@@ -41,7 +41,7 @@ export default {
         <a :href="b.url" class="no-styles">
           <div class="d-flex flex-column gap-2 bg-glass rounded p-3">
             <div class="d-flex align-items-center gap-3">
-              <img :src="b.thumbnail" :alt="b.title" width="80" height="80" class="object-fit-cover rounded-circle skeleton" >
+              <img :src="'https://lh3.googleusercontent.com/d/'+utilities.exId(b.thumbnail)" :alt="b.title" width="80" height="80" class="object-fit-cover rounded-circle skeleton" >
               <strong class="text-fade-3 text-info pop fs-6 m-0">{{b.title}}</strong>
             </div>
             <p style="min-height: 50px;" class="text-fade-3 text-normal m-0 fs-small">{{b.description}}</p>
